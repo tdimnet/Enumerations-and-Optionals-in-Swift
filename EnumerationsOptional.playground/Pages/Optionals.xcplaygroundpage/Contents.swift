@@ -49,6 +49,11 @@ struct Friend {
     let name: String
     let age: String
     let address: String?
+    
+    // Failable initializer
+//    init?(dictionary: [String: String]) {
+//        return nil
+//    }
 }
 
 func new(friendDictionnary: [String: String]) -> Friend? {
@@ -60,7 +65,16 @@ func new(friendDictionnary: [String: String]) -> Friend? {
     }
 }
 
-
+// Early Exit
+func newFriend(friendDictionnary: [String: String]) -> Friend? {
+    guard let name = friendDictionnary["name"], let age = friendDictionnary["age"] else {
+        return nil
+    }
+    
+    let address = friendDictionnary["address"]
+    
+    return Friend(name: name, age: age, address: address)
+}
 
 
 
