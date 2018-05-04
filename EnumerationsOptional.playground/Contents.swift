@@ -23,8 +23,25 @@ let result: String = dayType(for: week[4])
 let isMuted: Bool = isNotificationMuted(on: result)
 
 
+// Enum type would better for code organisation
+enum Day {
+    case sunday
+    case monday
+    case tuesday
+    case wednesday
+    case thursday
+    case friday
+    case saturday
+}
 
-
+func dayType(for day: Day) -> String {
+    switch day {
+    case Day.saturday, Day.sunday:
+        return "Weekend"
+    case Day.monday, Day.tuesday, Day.wednesday, Day.thursday, Day.friday:
+        return "Weekday"
+    }
+}
 
 
 
