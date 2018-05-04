@@ -13,6 +13,7 @@
 //}
 
 
+
 // 2.
 /*
  In the editor below you have two objects - classes named Point and Robot. The Robot stores its location as a point instance and contains a move function.
@@ -59,6 +60,7 @@ class Robot {
 }
 
 
+
 // 3.
 /*
  For this task, let's create a enum named MobilePhone. The enum will have three members: iphone, android and windowsPhone.
@@ -72,6 +74,60 @@ enum MobilePhone {
 }
 
 let iphone: MobilePhone = MobilePhone.iphone("7 Plus")
+
+
+
+// 4
+/*
+ 4.1
+ In the editor you've been provided with a file buttons.swift that defines a BarButton type.
+ Let's start simple. Declare a constant named done and assign an enum value of type BarButton with the member done. This member takes an associated value; assign it the string "Save".
+ 
+ ----
+ 
+ 4.2
+ Next, add a method to the enum named button that returns an instance of the class UIBarButtonItem configured properly. An example of how to create an instance for this task is shown in the comments below. Use the same initializer.
+ In the method, using the associated values as titles for the button, return a button with style UIBarButtonStyle.done for the done member of the BarButton enum. Similarly for the edit member, return a UIBarButtonItem instance with the style set to UIBarButtonStyle.plain.
+ In both cases you can pass nil for target and action. Once you have a method, call it on the value we created in the previous task and assign it to a constant named button.
+ */
+// Example of UIBarButtonItem instance
+// let someButton = UIBarButtonItem(title: "A Title", style: .plain, target: nil, action: nil)
+import UIKit
+enum BarButton {
+    case done(title: String)
+    case edit(title: String)
+    
+    func button() -> UIBarButtonItem {
+        switch self {
+        case .done(let title):
+            return UIBarButtonItem(title: title, style: .done, target: nil, action: nil)
+        case .edit(let title):
+            return UIBarButtonItem(title: title, style: .plain, target: nil, action: nil)
+        }
+    }
+}
+
+let done: BarButton = BarButton.done(title: "Save")
+let button = done.button()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
