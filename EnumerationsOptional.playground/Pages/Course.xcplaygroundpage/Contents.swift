@@ -61,7 +61,12 @@ let type = dayType(for: Day.saturday)
 let isMutedType = isNotificationMuted(on: type)
 
 
+enum ColorComponent {
+    case rgb(Float, Float, Float, Float)
+    case hsb(Float, Float, Float, Float)
+}
 
+ColorComponent.rgb(61.0, 120.0, 198.0, 1.0)
 
 
 
