@@ -57,16 +57,6 @@ func isNotificationMuted(on type: DayType) -> Bool {
     }
 }
 
-
-// Challenge
-    // Let's get in some practice creating a basic enum. Declare an enum named Direction with the members left, right, up, down.
-enum Direction {
-    case left
-    case right
-    case up
-    case down
-}
-
 let type = dayType(for: Day.saturday)
 let isMutedType = isNotificationMuted(on: type)
 
