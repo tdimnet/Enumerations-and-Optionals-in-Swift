@@ -4,5 +4,6 @@
         <page name='EnumerationsChallenges'/>
         <page name='Enumerations'/>
         <page name='Optionals'/>
+        <page name='OptionalsChallenges'/>
     </pages>
 </playground>
