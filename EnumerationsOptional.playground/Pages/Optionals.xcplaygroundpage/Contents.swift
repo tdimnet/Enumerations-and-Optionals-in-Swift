@@ -44,6 +44,29 @@ if let dailyWeather = weatherDictionary["daily"], let highTemperature = dailyWea
     print(highTemperature)
 }
 
+// Downsides to Using If Let
+struct Friend {
+    let name: String
+    let age: String
+    let address: String?
+}
+
+func new(friendDictionnary: [String: String]) -> Friend? {
+    if let name = friendDictionnary["name"], let age = friendDictionnary["age"] {
+        let address = friendDictionnary["address"]
+        return Friend(name: name, age: age, address: address)
+    } else {
+        return nil
+    }
+}
+
+
+
+
+
+
+
+
 
 
 
