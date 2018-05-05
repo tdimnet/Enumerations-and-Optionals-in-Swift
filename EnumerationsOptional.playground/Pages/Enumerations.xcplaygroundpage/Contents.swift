@@ -115,9 +115,20 @@ enum HTTP: String {
 // With string raw value, we get the value as string
 HTTP.delete.rawValue
 
+enum HTTPStatusCode: Int {
+    case success = 200
+    case forbidden = 403
+    case unauthorized = 401
+    case notFound = 404
+}
 
+let statusCode: Int = 200
 
+// let httpStatusCode = HTTPStatusCode(rawValue: statusCode) -> The value returns below is an optional value!
 
+if let httpStatusCode = HTTPStatusCode(rawValue: statusCode) {
+    print(httpStatusCode)
+}
 
 
 
