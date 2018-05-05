@@ -24,8 +24,8 @@ let isMuted: Bool = isNotificationMuted(on: result)
 
 
 // Enum type would better for code organisation
-enum Day {
-    case sunday
+enum Day: Int {
+    case sunday = 1
     case monday
     case tuesday
     case wednesday
@@ -33,6 +33,9 @@ enum Day {
     case friday
     case saturday
 }
+
+// Int raw value are auto-incremented
+Day.friday.rawValue
 
 enum DayType {
     case weekday
@@ -79,9 +82,38 @@ enum ColorComponent {
 ColorComponent.rgb(red: 61.0, green: 120.0, blue: 198.0, alpha: 1.0).color()
 
 
+// Enum with Raws Values
+enum Coin: Double {
+    case penny = 0.01
+    case nickel = 0.05
+    case dime = 0.1
+    case quarter = 0.25
+}
+
+let coins: [Coin] = [Coin.penny, Coin.nickel, Coin.dime, Coin.dime, Coin.quarter, Coin.quarter, Coin.quarter]
+
+func sum(having coins: [Coin]) -> Double {
+    var total: Double = 0
+    
+    for coin in coins {
+        total += coin.rawValue
+    }
+    
+    return total
+}
+
+sum(having: coins)
 
 
+enum HTTP: String {
+    case post
+    case get
+    case put
+    case delete
+}
 
+// With string raw value, we get the value as string
+HTTP.delete.rawValue
 
 
 
