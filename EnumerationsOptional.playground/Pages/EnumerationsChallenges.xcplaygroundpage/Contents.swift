@@ -112,9 +112,21 @@ let button = done.button()
 
 
 
+// 5
+/*
+ Let's get in some practice creating enums with raw values. Declare an enum named Compass with a raw value of type Int.
+ Give the enum 4 members: north, south, east and west and assign them default raw values.
+ Assign the enum value Compass.south to a constant named direction, by using a raw value with Compass' initializer method.
+ */
 
+enum Compass: Int {
+    case north = 100
+    case south = 230
+    case east = 340
+    case west = 500
+}
 
-
+let direction = Compass(rawValue: 230)
 
 
 
