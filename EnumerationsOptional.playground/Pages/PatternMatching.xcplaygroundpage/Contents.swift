@@ -36,3 +36,32 @@ let someOptional: Int? = 42
 if case .some(let x) = someOptional {
     print(x)
 }
+
+
+// Nil Coalescing Operator
+let firstName: String? = "Thomas"
+let username: String = "tdimnet"
+
+// We should use a ternary operator and using const instead
+//var displayName: String
+//
+//if let name = firstName {
+//    displayName = name
+//} else {
+//    displayName = username
+//}
+
+// let displayName: String = firstName != nil ? firstName! : username -> ok but bad practice since we are using "firstname!"
+
+// This is the better method to do this kind of verification
+let displayName: String = firstName ?? username
+
+print(displayName)
+
+
+
+
+
+
+
+
