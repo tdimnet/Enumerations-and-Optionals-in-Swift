@@ -6,5 +6,6 @@
         <page name='Optionals'/>
         <page name='OptionalsChallenges'/>
         <page name='OptionalChaning'/>
+        <page name='PatternMatching'/>
     </pages>
 </playground>
